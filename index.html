@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="de">
 <head>
 <meta charset="UTF-8">
@@ -154,26 +154,36 @@
   /* HAMBURGER */
   .hamburger { display:none !important; }
 
-  @media (max-width:900px) {
-    nav { padding:18px 24px; flex-wrap:wrap; gap:10px; }
-    .nav-links { display:flex !important; flex-wrap:wrap; gap:16px; font-size:11px; }
+  @media (max-width:768px) {
+    nav { padding:12px 16px; flex-wrap:wrap; gap:8px; justify-content:center; }
+    .nav-links { display:flex !important; flex-wrap:wrap; gap:10px; font-size:10px; justify-content:center; width:100%; order:2; }
+    .nav-links span { padding:4px 0; }
     .hamburger { display:none !important; }
-    .logo { font-size:16px; }
-    #home { flex-direction:column; }
-    .hero-left { padding:20px 24px 50px; }
-    .hero-left h1 { font-size:44px; }
+    #home { flex-direction:column; padding-top:80px; }
+    .hero-left { padding:30px 20px 40px; text-align:center; align-items:center; }
+    .hero-left h1 { font-size:36px; }
+    .hero-tagline { font-size:11px; }
     #ueber { grid-template-columns:1fr; }
-    .ueber-text { padding:50px 24px; }
-    .ueber-img { min-height:320px; }
-    #leistungen { padding:70px 24px; }
-    .tab-btn { padding:12px 14px; font-size:11px; }
-    #social { padding:70px 24px; }
-    #social h2 { font-size:40px; }
-    #kontakt { grid-template-columns:1fr; padding:70px 24px; gap:48px; }
+    .ueber-text { padding:40px 20px; }
+    .ueber-img { min-height:280px; }
+    #leistungen { padding:50px 20px; }
+    .section-header h2 { font-size:36px; }
+    .leistungen-tabs { flex-direction:column; align-items:center; }
+    .tab-btn { padding:10px 16px; font-size:11px; width:100%; text-align:center; }
+    .service-item { flex-direction:column; gap:4px; }
+    .service-price { font-size:18px; }
+    #social { padding:50px 20px; }
+    #social h2 { font-size:32px; }
+    .social-icons { gap:24px; }
+    .social-icon-circle { width:55px; height:55px; }
+    #faq { padding:50px 20px !important; }
+    #kontakt { grid-template-columns:1fr; padding:50px 20px; gap:32px; }
+    .kontakt-left h2 { font-size:34px; }
     .kontakt-form { padding-top:0; }
-    footer { flex-direction:column; text-align:center; gap:20px; padding:36px 24px; }
+    footer { flex-direction:column; text-align:center; gap:16px; padding:30px 20px; }
     .footer-danke { text-align:center; }
-    .leistungen-cta { flex-direction:column; gap:24px; }
+    .footer-links { flex-direction:column; gap:10px; align-items:center; }
+    .leistungen-cta { flex-direction:column; gap:20px; text-align:center; }
     .form-row { grid-template-columns:1fr; }
     .service-item { flex-direction:column; gap:4px; }
     .legal-page { padding:70px 24px; }
