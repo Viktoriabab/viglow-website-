@@ -508,17 +508,22 @@
       <a href="https://calendly.com/viglowbyviktoria" target="_blank" class="btn-primary" style="margin-top:32px;">&#9783;&nbsp; Termin buchen</a>
     </div>
 
-    <div class="kontakt-form">
+    <form class="kontakt-form" action="https://formspree.io/f/xwvyangp" method="POST">
       <div class="form-row">
-        <div class="form-group"><label>Vorname</label><input type="text" id="f-vorname" placeholder="Dein Vorname"></div>
-        <div class="form-group"><label>Nachname</label><input type="text" id="f-nachname" placeholder="Dein Nachname"></div>
+        <div class="form-group"><label>Vorname *</label><input type="text" name="vorname" placeholder="Dein Vorname" required></div>
+        <div class="form-group"><label>Nachname *</label><input type="text" name="nachname" placeholder="Dein Nachname" required></div>
       </div>
-      <div class="form-group"><label>E-Mail</label><input type="email" id="f-email" placeholder="deine@email.de"></div>
-      <div class="form-group"><label>Telefon</label><input type="tel" id="f-tel" placeholder="Deine Telefonnummer"></div>
-      <div class="form-group"><label>Nachricht</label><textarea id="f-msg" placeholder="Wie kann ich dir helfen?"></textarea></div>
-      <p class="form-note">* Beim Klick öffnet sich dein E-Mail-Programm mit der ausgefüllten Nachricht.</p>
-      <button class="btn-primary" onclick="sendMail()">Nachricht senden →</button>
-    </div>
+      <div class="form-group"><label>E-Mail *</label><input type="email" name="email" placeholder="deine@email.de" required></div>
+      <div class="form-group"><label>Telefon / Handynummer *</label><input type="tel" name="telefon" placeholder="Deine Handynummer" required></div>
+      <div class="form-group"><label>Nachricht</label><textarea name="nachricht" placeholder="Wie kann ich dir helfen?" required></textarea></div>
+      <div class="form-group" style="flex-direction:row;align-items:flex-start;gap:12px;">
+        <input type="checkbox" name="datenschutz" id="datenschutz" required style="margin-top:3px;width:16px;height:16px;accent-color:var(--brown);flex-shrink:0;">
+        <label for="datenschutz" style="font-size:13px;color:var(--text-light);text-transform:none;letter-spacing:0;cursor:pointer;">
+          Ich habe die <span onclick="showLegal('datenschutzPage')" style="color:var(--brown);text-decoration:underline;cursor:pointer;">Datenschutzerklärung</span> gelesen und stimme der Verarbeitung meiner Daten zu.
+        </label>
+      </div>
+      <button type="submit" class="btn-primary">Nachricht senden →</button>
+    </form>
   </section>
 
 </div><!-- end mainContent -->
@@ -553,6 +558,8 @@
   <p>Diese Website verwendet Google Ads mit Conversion-Tracking. Anbieter: Google Ireland Limited, Dublin 4, Irland. Mehr Infos: policies.google.com/privacy</p>
   <h3>Instagram &amp; TikTok</h3>
   <p>Wir unterhalten Profile bei Instagram (Meta Platforms Ireland Ltd.) und TikTok (TikTok Technology Limited, Dublin). Details in den jeweiligen Datenschutzerklärungen der Anbieter.</p>
+  <h3>Kontaktformular (Formspree)</h3>
+  <p>Für unser Kontaktformular nutzen wir Formspree (Formspree Inc., USA). Wenn Sie das Formular absenden, werden Ihre Daten (Name, E-Mail, Telefonnummer, Nachricht) an Formspree übermittelt und an uns weitergeleitet. Mehr: formspree.io/legal/privacy-policy</p>
   <h3>Calendly</h3>
   <p>Für Terminbuchungen nutzen wir Calendly (Calendly LLC, Atlanta, USA). Ihre Buchungsdaten werden dort verarbeitet. Mehr: calendly.com/privacy</p>
   <h3>Kleinunternehmerregelung</h3>
